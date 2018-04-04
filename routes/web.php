@@ -1,5 +1,5 @@
 <?php
-
+use App\Events\OrderStatusUpdated;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,5 +12,6 @@
 */
 
 Route::get('/', function () {
+	OrderStatusUpdated::dispatch();
     return view('welcome');
 });
